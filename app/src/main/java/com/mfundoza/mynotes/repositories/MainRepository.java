@@ -11,11 +11,11 @@ import com.mfundoza.mynotes.roomdatabase.NoteDatabase;
 
 import java.util.List;
 
-public class NoteRepository {
+public class MainRepository {
     private NoteDao noteDao;
     private LiveData<List<Note>> allNotes;
 
-    public NoteRepository(Application application) {
+    public MainRepository(Application application) {
         NoteDatabase database = NoteDatabase.getInstance(application);
         noteDao = database.noteDao();
         allNotes = noteDao.getAllNotes();

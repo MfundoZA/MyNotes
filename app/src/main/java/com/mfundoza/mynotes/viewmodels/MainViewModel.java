@@ -7,19 +7,19 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
 import com.mfundoza.mynotes.models.Note;
-import com.mfundoza.mynotes.repositories.NoteRepository;
+import com.mfundoza.mynotes.repositories.MainRepository;
 
 import java.util.List;
 
-public class NoteViewModel extends AndroidViewModel {
+public class MainViewModel extends AndroidViewModel {
 
-    private NoteRepository repository;
+    private MainRepository repository;
     private LiveData<List<Note>> allNotes;
 
-    public NoteViewModel(@NonNull Application application) {
+    public MainViewModel(@NonNull Application application) {
         super(application);
 
-        repository = new NoteRepository(application);
+        repository = new MainRepository(application);
         allNotes = repository.getAllNotes();
     }
 

@@ -8,16 +8,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.google.android.material.snackbar.Snackbar;
 import com.mfundoza.mynotes.adapters.NoteAdapter;
 import com.mfundoza.mynotes.models.Note;
-import com.mfundoza.mynotes.viewmodels.NoteViewModel;
+import com.mfundoza.mynotes.viewmodels.MainViewModel;
 
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private NoteViewModel noteViewModel;
+    private MainViewModel mainViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
         NoteAdapter adapter = new NoteAdapter();
         recyclerView.setAdapter(adapter);
 
-        noteViewModel = new ViewModelProvider(this).get(NoteViewModel.class);
-        noteViewModel.getAllNotes().observe(this, new Observer<List<Note>>() {
+        mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
+        mainViewModel.getAllNotes().observe(this, new Observer<List<Note>>() {
             @Override
             public void onChanged(List<Note> notes) {
                 // Update our RecyclerView
