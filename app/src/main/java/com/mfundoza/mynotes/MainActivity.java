@@ -111,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Undo", new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
+                                // Todo fix this
                                 mainViewModel.undoDeleteAll(allNotes);
                             }
                         })
