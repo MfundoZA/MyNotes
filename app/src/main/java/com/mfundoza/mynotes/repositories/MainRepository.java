@@ -22,7 +22,7 @@ public class MainRepository {
     }
 
     public void insert(Note note) {
-        new InsertNoteAsyncTask(noteDao).execute(note);
+        new MainRepository.InsertNoteAsyncTask(noteDao).execute(note);
     }
 
     public void update(Note note) {
@@ -39,6 +39,10 @@ public class MainRepository {
 
     public LiveData<List<Note>> getAllNotes() {
         return allNotes;
+    }
+
+    public void undoDeleteAllNotes(Note[] notes) {
+        new UndoDeleteAllNotesAsyncTask(noteDao).execute();
     }
 
     private static class InsertNoteAsyncTask extends AsyncTask<Note, Void, Void> {
@@ -93,6 +97,21 @@ public class MainRepository {
         @Override
         protected Void doInBackground(Void... voids) {
             noteDao.deleteAllNotes();
+            return null;
+        }
+    }
+
+    private static class UndoDeleteAllNotesAsyncTask extends AsyncTask<Note, Void, Void> {
+        private NoteDao noteDao;
+
+        private UndoDeleteAllNotesAsyncTask(NoteDao noteDao) {
+            this.noteDao = noteDao;
+        }
+
+        @Override
+        protected Void doInBackground(Note... notes) {
+            noteDao.undoDeleteAll(notes);
+
             return null;
         }
     }

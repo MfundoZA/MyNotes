@@ -39,7 +39,10 @@ public class MainViewModel extends AndroidViewModel {
         repository.deleteAllNotes();
     }
 
+    public void undoDeleteAll(Note[] notes) {repository.undoDeleteAllNotes(notes);}
+
     public LiveData<List<Note>> getAllNotes() {
         return allNotes;
     }
+
 }
