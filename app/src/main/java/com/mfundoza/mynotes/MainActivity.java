@@ -16,19 +16,22 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    private ActivityMainBinding binding;
     private MainViewModel mainViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        RecyclerView recyclerView = findViewById(R.id.rcyNotes);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setHasFixedSize(true);
+
+
+        binding.rcyNotes.setLayoutManager(new LinearLayoutManager(this));
+        binding.rcyNotes.setHasFixedSize(true);
 
         NoteAdapter adapter = new NoteAdapter();
-        recyclerView.setAdapter(adapter);
+        binding.rcyNotes.setAdapter(adapter);
 
         mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
         mainViewModel.getAllNotes().observe(this, new Observer<List<Note>>() {
