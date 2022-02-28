@@ -1,20 +1,8 @@
 <resources>
     <color name="light_md_primary">#FFFFFF</color>
-    <color name="light_md_on_primary">#000000</color>
-    <color name="light_md_primary_container">#AEADAE</color>
-    <color name="light_md_on_primary_container">#000000</color>
-    <color name="light_md_primary_dark">#AEADAE</color>
-    <color name="light_md_on_primary_variant">#000000</color>
     <color name="light_md_secondary">#8BC34A</color>
-    <color name="light_md_on_secondary">#000000</color>
     <color name="light_md_secondary_container">#BEF67A</color>
-    <color name="light_md_on_secondary_container">#000000</color>
     <color name="light_md_secondary_variant" >#5A9216</color>
-    <color name="light_md_on_secondary_variant" >#000000</color>
-    <color name="light_md_background">#FFFFFF</color>
-    <color name="light_md_on_background">#000000</color>
-    <color name="light_md_surface">#FFFFFF</color>
-    <color name="light_md_on_surface">#000000</color>
     <color name="light_md_error">#B00020</color>
-    <color name="light_md_on_error">#FFFFFF</color>
+    <color name="light_md_text_color">#000000</color>
 </resources>
