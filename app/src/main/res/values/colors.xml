@@ -1,8 +1,10 @@
 <resources>
     <color name="light_md_primary">#FFFFFF</color>
-    <color name="light_md_secondary">#8BC34A</color>
-    <color name="light_md_secondary_container">#BEF67A</color>
-    <color name="light_md_secondary_variant" >#5A9216</color>
-    <color name="light_md_error">#B00020</color>
     <color name="light_md_text_color">#000000</color>
+    <color name="dark_md_primary">#121212</color>
+    <color name="dark_md_text_color">#FFFFFF</color>
+    <color name="md_secondary">#8BC34A</color>
+    <color name="md_secondary_container">#BEF67A</color>
+    <color name="md_secondary_variant" >#5A9216</color>
+    <color name="md_error">#B00020</color>
 </resources>
