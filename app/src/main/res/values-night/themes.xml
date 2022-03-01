@@ -1,17 +1,17 @@
 <resources>
 
     <style name="Theme.MyNotesDark" parent="Theme.AppCompat">
-        <item name="colorPrimary">#131313</item>
-        <item name="colorOnPrimary">#FFFFFF</item>
-        <item name="colorPrimaryDark">#000000</item>
-        <item name="colorSecondary">@color/light_md_secondary</item>
-        <item name="colorOnSecondary">@color/design_default_color_on_secondary</item>
-        <item name="colorSecondaryContainer">@color/light_md_secondary_container</item>
-        <item name="colorOnSecondaryContainer">@color/light_md_on_secondary_container</item>
-        <item name="colorError">@color/light_md_error</item>
-        <item name="colorOnError">@color/light_md_on_error</item>
-        <item name="colorOnBackground">#FFFFFF</item>
-        <item name="colorSurface">#131313</item>
-        <item name="colorOnSurface">#FFFFFF</item>
+        <item name="colorPrimary">@color/dark_md_primary</item>
+        <item name="colorPrimaryDark">@android:color/black</item>
+        <item name="colorSecondary">@color/md_secondary</item>
+        <item name="colorSecondaryContainer">@color/md_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/>@android:color/white</item>
+        <item name="android:colorBackground">@android:color/black</item>
+        <item name="colorSurface">@color/dark_md_primary</item>
+        <item name="colorError">@color/md_error</item>
+        <item name="colorOnError">@color/md_on_error</item>
+        <item name="colorOnSurface">@android:color/white</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:windowLightStatusBar">false</item>
     </style>
 </resources>
